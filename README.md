@@ -130,8 +130,7 @@ A composite vulnerability score considers:
 This score supports prioritizing interventions or new shelter locations.
 
 ## **7. Optimizaton Formulation**
-(For additional information, reference the Final Formulation.) To obtain a Pareto-style frontier, we vary $K$, the maximum number of new shelters that may be opened.  
-For each fixed K, we solve a lexicographically ordered three-stage problem:
+(For additional information, reference the Final Formulation.) To obtain a Pareto-style frontier, we vary $K$, the maximum number of new shelters that may be opened. For each fixed K, we solve a lexicographically ordered three-stage problem:
 - Stage 1 (Risk-coverage first): maximize total risk-weighted covered population, producing $S_r^\star(K)$ and $\alpha_r^\star(K)$.
 - Stage 1b (Existing-use tie-break): among nearly Stage-1-optimal solutions, maximize use of existing shelters, producing $U_E^\star(K)$.
 - Stage 2 (Distance tie-break): among solutions preserving near-optimal risk coverage and existing-use, minimize total travel distance.

@@ -136,6 +136,8 @@ For each fixed K, we solve a lexicographically ordered three-stage problem:
 - Stage 1b (Existing-use tie-break): among nearly Stage-1-optimal solutions, maximize use of existing shelters, producing $U_E^\star(K)$.
 - Stage 2 (Distance tie-break): among solutions preserving near-optimal risk coverage and existing-use, minimize total travel distance.
 
+For additional information, reference the Final Formulation.
+
 # **Outputs**
 
 ### `grid_with_pop.csv`**

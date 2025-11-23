@@ -99,14 +99,14 @@ Below is a high-level description of the modeling pipeline.
 - - Output: **`grid_pop.csv`**, **`shelter_final.csv`**
 
 ## **2. Constructing the Analysis Grid**
-- Generate a uniform analysis grid (e.g., 250m or 500m resolution).  
-- Intersect the grid with union boundaries.  
+- Generate a uniform analysis grid (e.g., 1 sq km resolution).  
+- Plot union boundaries.  
 - Mask out uninhabitable areas (water bodies, marshes, etc.) using land-cover data.
 
 ## **3. Population Allocation**
 - Retrieve union-level total population.  
 - Count the number of *inhabited* grid cells per union.  
-- Distribute union population proportionally across inhabited cells.  
+- Distribute union population randomly across inhabited cells.  
 - Output: **`grid_pop.csv`**
 
 ## **4. Environmental Feature Integration**
@@ -114,10 +114,7 @@ For each grid cell:
 - Elevation (m)  
 - Slope (degrees)  
 - Land cover category  
-- Distance to coastline  
-- Flood depth (if available)  
-- Cyclone wind zone classification  
-- Landslide hazard rating  
+- Distance to coastline     
 
 ## **5. Shelter Accessibility Analysis**
 - Compute Euclidean or network distances from each grid cell to all shelters.  
@@ -125,11 +122,9 @@ For each grid cell:
 - Flag underserved cells (e.g., > 2 km from nearest shelter).  
 - Generate heatmaps and risk-access overlays.
 
-## **6. Risk Overlay & Vulnerability Scoring**
+## **6. Risk Scoring**
 A composite vulnerability score considers:
-- Hazard exposure (flood, cyclone, landslide)  
-- Accessibility (distance to shelter)  
-- Population density  
+- Hazard exposure (distance fom coast)  
 - Terrain constraints (elevation, slope)  
 
 This score supports prioritizing interventions or new shelter locations.
@@ -147,14 +142,13 @@ Contains:
 ### **`shelter_final.csv`**
 Cleaned cyclone shelter list with:
 - Coordinates  
-- Capacity (if available)  
+- Capacity
 - Union name  
 
 ### **Visualizations**
 - Population density maps  
 - Accessibility heatmaps  
 - Hazard exposure overlays  
-- Composite vulnerability maps
 - Shelter assignment maps
 
 ---
